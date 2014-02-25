@@ -12,6 +12,15 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem "paperclip", "~> 4.1"
 gem 'devise'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end
